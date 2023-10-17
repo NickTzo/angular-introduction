@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
   constructor(private appService: AppService = Inject(AppService)) { }
 
   ngOnInit(): void {
-    this.appService.getAllUser().subscribe((users) => {
+    this.appService.getAllUsers().subscribe((users) => {
       this.users = users
       console.log(this.users);
     })

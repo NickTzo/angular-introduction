@@ -10,7 +10,7 @@ export class AppService {
 
   constructor(private http: HttpClient = inject(HttpClient)) { }
 
-  getAllUser() {
+  getAllUsers() {
     return this.http.get<Person[]>('http://localhost:3000/users')
   }
 
