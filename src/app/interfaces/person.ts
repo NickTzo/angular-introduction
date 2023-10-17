@@ -5,4 +5,5 @@ export interface Person {
   email: string;
   // address?: string;   // το ? το κανει optional
   address: string;
+  photoURL?: string;
 }
