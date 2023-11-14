@@ -40,7 +40,7 @@
       "id": 5,
       "givenName": "Jake",
       "surName": "Smith",
-      "age": 36,
+      "age": "37",
       "email": "jake.smith@example.com",
       "address": "789 Broadway",
       "photoURL": "https://i.pravatar.cc/?img=5"
@@ -100,15 +100,6 @@
       "id": 11
     },
     {
-      "givenName": "George",
-      "surName": "Fragkoudakis",
-      "age": 19,
-      "email": "george@ecample.com",
-      "address": "Palini, Greece",
-      "photoURL": "https://i.pravatar.cc/?img=34",
-      "id": 12
-    },
-    {
       "givenName": "Peter",
       "surName": "Jackson",
       "age": 56,
@@ -116,6 +107,24 @@
       "address": "New Zeland",
       "photoURL": "https://i.pravatar.cc/?img=44",
       "id": 13
+    },
+    {
+      "id": 15,
+      "givenName": "NIKOLAOS",
+      "surName": "TZORTZIS",
+      "age": "29",
+      "email": "nikostzortzis@hotmail.gr",
+      "address": "STEFANOU KOUMANOUDI 43-45",
+      "photoURL": "https://i.pravatar.cc/?img=33"
+    },
+    {
+      "id": 16,
+      "givenName": "NIKOLAOS",
+      "surName": "TZORTZIS",
+      "age": "58",
+      "email": "nikostzortziss@gmail.com",
+      "address": "Νικηφόρου Βρεττάκου",
+      "photoURL": ""
     }
   ]
 }

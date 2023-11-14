@@ -1,28 +1,48 @@
-<div class="dropdown">
+<!-- <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    CRUD Demo (requires json Server)
+    CRUD Demo (requires JSON Server)
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" (click)="onSelection('create')" role="button">Create User</a></li>
-    <li><a class="dropdown-item" (click)="onSelection('read')" role="button">Read User</a></li>
-    <li><a class="dropdown-item" (click)="onSelection('update')" role="button">Update User</a></li>
-    <li><a class="dropdown-item" (click)="onSelection('delete')" role="button">Delete User</a></li>
-    <li><a class="dropdown-item" (click)="onSelection('list')" role="button">List Users</a></li>
+    <li>
+      <a class="dropdown-item" (click)="onSelection('create')" role="button">Create User</a>
+    </li>
+    <li>
+      <a class="dropdown-item" (click)="onSelection('read')" role="button">Read User</a>
+    </li>
+    <li>
+      <a class="dropdown-item" (click)="onSelection('update')" role="button">Update User</a>
+    </li>
+    <li>
+      <a class="dropdown-item" (click)="onSelection('delete')" role="button">Delete User</a>
+    </li>
+    <li>
+      <a class="dropdown-item" (click)="onSelection('list')" role="button">List Users</a>
+    </li>
   </ul>
-</div>
+</div> -->
 
-<ng-container *ngIf="crudOperation" (ngSwitch)="crudOperation">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="onSelection('create')" role="button" href="#">Create User</a>
+    <a class="navbar-brand" (click)="onSelection('read')" role="button" href="#">Read User</a>
+    <a class="navbar-brand" (click)="onSelection('update')" role="button" href="#">Update User</a>
+    <a class="navbar-brand" (click)="onSelection('delete')" role="button" href="#">Delete User</a>
+    <a class="navbar-brand" (click)="onSelection('list')" role="button" href="#">List Users</a>
+  </div>
+</nav>
+
+<ng-container *ngIf="crudOperation" [ngSwitch]="crudOperation">
   <ng-container *ngSwitchCase="'create'">
-    <app-create-user></app-create-user>
+    <app-create-user (userCreated)="listUsers()"></app-create-user>
   </ng-container>
   <ng-container *ngSwitchCase="'read'">
     <app-read-user></app-read-user>
   </ng-container>
   <ng-container *ngSwitchCase="'update'">
-    <app-update-user></app-update-user>
+    <app-update-user (userUpdated)="listUsers()"></app-update-user>
   </ng-container>
   <ng-container *ngSwitchCase="'delete'">
-    <app-delete-user></app-delete-user>
+    <app-delete-user (userDeleted)="listUsers()"></app-delete-user>
   </ng-container>
   <ng-container *ngSwitchCase="'list'">
     <app-list-users></app-list-users>
