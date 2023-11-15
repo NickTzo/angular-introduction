@@ -21,7 +21,7 @@ import { AppService } from '../app.service';
     MatListModule,
     MatIconModule,
     MatExpansionModule,
-    RouterModule
+    RouterModule,
   ],
   templateUrl: './application-layout.component.html',
   styleUrls: ['./application-layout.component.css'],
@@ -36,7 +36,6 @@ export class ApplicationLayoutComponent {
 
   isLoggedIn$ = this.appService.isLoggedIn;
   fullname$ = this.appService.fullname;
-
   constructor(
     private breakpointObserver: BreakpointObserver,
     private appService: AppService = Inject(AppService)
