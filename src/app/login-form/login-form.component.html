@@ -16,7 +16,7 @@
         <input matInput type="password" formControlName="password" />
         <mat-error *ngIf="
             form.controls.password.invalid && form.controls.password.touched
-          ">Username is required</mat-error>
+          ">Password is required</mat-error>
       </mat-form-field>
 
       <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" (click)="onSubmit()">
